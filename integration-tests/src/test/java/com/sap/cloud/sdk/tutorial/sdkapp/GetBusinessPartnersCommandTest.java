@@ -23,7 +23,7 @@ public class GetBusinessPartnersCommandTest {
     @Before
     public void beforeClass() {
         mockUtil = new MockUtil();
-        mockUtil.mockDefaults();
+        //mockUtil.mockDefaults();
     }
 
     private List<BusinessPartner> getBusinessPartners() {
