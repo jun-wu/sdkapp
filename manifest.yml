@@ -4,7 +4,9 @@ applications:
 - name: sdkapp
   memory: 1024M
   timeout: 300
-  random-route: true
+#  random-route: true
+  routes:
+    - route: sdkapp-p514599.cfapps.eu10.hana.ondemand.com
   path: application/target/sdkapp-application.war
   buildpacks:
     - sap_java_buildpack
