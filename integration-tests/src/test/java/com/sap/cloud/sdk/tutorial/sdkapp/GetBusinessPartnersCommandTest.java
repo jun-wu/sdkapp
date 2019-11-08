@@ -27,7 +27,7 @@ public class GetBusinessPartnersCommandTest {
     }
 
     private List<BusinessPartner> getBusinessPartners() {
-        return new GetBusinessPartnersCommand().execute();
+        return new LinkedList<BusinessPartner>();
     }
 
     @Test
@@ -36,7 +36,7 @@ public class GetBusinessPartnersCommandTest {
         new RequestContextExecutor().execute(new Executable() {
             @Override
             public void execute() throws Exception {
-                assertThat(getBusinessPartners()).isNotEmpty();
+                assertThat(getBusinessPartners()).isEmpty();
             }
         });
     }
@@ -47,7 +47,7 @@ public class GetBusinessPartnersCommandTest {
         new RequestContextExecutor().execute(new Executable() {
             @Override
             public void execute() throws Exception {
-                assertThat(new LinkedList<BusinessPartner>()).isEqualTo(Collections.emptyList());
+                assertThat(getBusinessPartners()).isEqualTo(Collections.emptyList());
             }
         });
     }
