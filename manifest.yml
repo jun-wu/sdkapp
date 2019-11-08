@@ -12,6 +12,7 @@ applications:
     TARGET_RUNTIME: tomee7
     SET_LOGGING_LEVEL: '{ROOT: INFO, com.sap.cloud.sdk: INFO}'
     JBP_CONFIG_SAPJVM_MEMORY_SIZES: 'metaspace:128m..'
+    destinations: [{name: 'ErpQueryEndpoint', url: 'http://mockserver-spontaneous-oribi.cfapps.eu10.hana.ondemand.com'}]
 #  services:
 #  - my-application-logs
 #  - my-xsuaa
