@@ -32,7 +32,7 @@ public class GetBusinessPartnersCommandTest {
 
     @Test
     public void testWithSuccess() throws Exception {
-        mockUtil.mockErpDestination();
+       // mockUtil.mockErpDestination();
         new RequestContextExecutor().execute(new Executable() {
             @Override
             public void execute() throws Exception {
@@ -43,7 +43,7 @@ public class GetBusinessPartnersCommandTest {
 
     @Test
     public void testWithFallback() throws Exception {
-        mockUtil.mockDestination("ErpQueryEndpoint", new URI("http://localhost"));
+       // mockUtil.mockDestination("ErpQueryEndpoint", new URI("http://localhost"));
         new RequestContextExecutor().execute(new Executable() {
             @Override
             public void execute() throws Exception {
