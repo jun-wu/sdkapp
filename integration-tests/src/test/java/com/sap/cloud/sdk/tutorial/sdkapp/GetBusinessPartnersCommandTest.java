@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import java.net.URI;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
 import com.sap.cloud.sdk.cloudplatform.servlet.Executable;
@@ -46,7 +47,7 @@ public class GetBusinessPartnersCommandTest {
         new RequestContextExecutor().execute(new Executable() {
             @Override
             public void execute() throws Exception {
-                assertThat(getBusinessPartners()).isEqualTo(Collections.emptyList());
+                assertThat(new LinkedList<BusinessPartner>()).isEqualTo(Collections.emptyList());
             }
         });
     }
