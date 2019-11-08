@@ -51,3 +51,12 @@ integrationTests:
 #        appName: 'myAppName'
 #        manifest: 'manifest.yml'
 #        credentialsId: 'myDeploymentCredentialsId'
+productionDeployment:
+    cfTargets:
+      - org: 'P514599trial_trial'
+        space: 'dev'
+        apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
+        appName: 'sdkapp'
+        manifest: 'manifest.yml'
+        credentialsId: 'CredentialsId-SCP'
+
